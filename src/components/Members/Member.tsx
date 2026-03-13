@@ -15,7 +15,7 @@ export const Member: FC<IMemberProps> = ({ member }) => {
       style={{ width: '18rem' }}
     >
       <Card.Img variant="top" src={member.image} sizes="" />
-      <Card.Body className="bg-card p-3 rounded-b-md">
+      <Card.Body className="rounded-b-md border border-textDark/15 bg-card p-3 shadow-sm">
         {member.homepage === '' ? (
           <Card.Title className="p-1 text-text">{member.name}</Card.Title>
         ) : (

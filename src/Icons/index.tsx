@@ -76,7 +76,7 @@ export const LineSvg: FC<Props> = ({ className, ...otherProps }) => {
       width="438"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M0 1H438" stroke="#C7D3FF" />
+      <path d="M0 1H438" stroke="currentColor" />
     </svg>
   );
 };

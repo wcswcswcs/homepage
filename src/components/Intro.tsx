@@ -14,34 +14,29 @@ export const Intro = () => {
     >
       <div className="w-3/5 md:w-3/5 text-textDark float-left">
         <div className="w-5/5 md:w-5/5 text-textDark ">
-          <p className="text-2xl text-neon font-fira">Welcome to </p>
+          <p className="text-2xl text-textDark font-fira">Welcome to </p>
           <h1 className="text-5xl font-extrabold text-text md:text-5xl">
             Intelligent Machine Perception Lab
           </h1>
           <h2 className="text-4xl text-textDark md:text-2xl">
-          at Singapore University of Technology and Design
+            at Singapore University of Technology and Design
           </h2>
         </div>
-      
+
         <div className="w-5/5 md:w-5/5 text-textDark ">
-          <span className="text-neon">{data.intro} </span>
-          <p>
-            {data.intro2}
-          </p>
-          <p>
-            {data.intro3}
-          </p>
-          
+          <span className="font-medium text-text">{data.intro} </span>
+          <p>{data.intro2}</p>
+          <p>{data.intro3}</p>
         </div>
       </div>
       <Image
-          alt='data.username'
-          className="object-contain float-left w-3/9 "
-          height={400}
-          src={data.school}
-          width={500}
+        alt="data.username"
+        className="object-contain float-left w-3/9 "
+        height={400}
+        src={data.school}
+        width={500}
       />
-      
+
       {/* <div className="flex space-x-3">
         <Link
           activeClass="active"

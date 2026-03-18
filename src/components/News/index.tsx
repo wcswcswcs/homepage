@@ -75,14 +75,15 @@ const getNewsCategory = (news: NewType): NewsCategory => {
 
 export const News = () => {
   const [filter, setFilter] = useState<NewsFilter>('all');
+  const newsItems = data.news as NewType[];
 
   const filteredNews = useMemo(() => {
     if (filter === 'all') {
-      return data.news;
+      return newsItems;
     }
 
-    return data.news.filter(item => getNewsCategory(item) === filter);
-  }, [filter]);
+    return newsItems.filter(item => getNewsCategory(item) === filter);
+  }, [filter, newsItems]);
 
   return (
     <div className="space-y-5 max-w-7xl w-full mx-auto p-5 md:p-0 " id="work">

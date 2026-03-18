@@ -1942,6 +1942,7 @@ const data = {
       image: '/members/fujingyun.png',
       mail: '',
       homepage: '',
+      destination: 'NA',
     },
     {
       name: 'Jincheng Huang',
@@ -1952,6 +1953,7 @@ const data = {
       image: '/members/jincheng.png',
       mail: '',
       homepage: 'https://huangjc0429.github.io',
+      destination: 'NA',
     },
     {
       name: 'Ziyan Guo (co-advising)',
@@ -1962,6 +1964,7 @@ const data = {
       image: '/members/ziyan.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=u8E2VQUAAAAJ&hl=en',
+      destination: 'NA',
     },
     {
       name: 'Zhihao Yuan',
@@ -1972,6 +1975,7 @@ const data = {
       image: '/members/zhihao.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=jLqS89IAAAAJ&hl=en',
+      destination: 'NA',
     },
     {
       name: 'Vishal Thengane',
@@ -1982,6 +1986,7 @@ const data = {
       image: '/members/Vishal.png',
       mail: '',
       homepage: 'https://vgthengane.github.io/',
+      destination: 'NA',
     },
     {
       name: 'Qiongjie Cui',
@@ -1993,6 +1998,7 @@ const data = {
       mail: '',
       homepage:
         'https://scholar.google.com.hk/citations?user=VoPGwJQAAAAJ&hl=zh-CN',
+      destination: 'NA',
     },
     {
       name: 'Qun Li',
@@ -2003,6 +2009,7 @@ const data = {
       image: '/members/liqun.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=hQZFOQYAAAAJ&hl=en',
+      destination: 'NA',
     },
     // {
     //   name: 'Zhoutao Wang',
@@ -2014,6 +2021,7 @@ const data = {
     //   mail: '',
     //   homepage:
     //     'https://scholar.google.com.hk/citations?user=Bj29izQAAAAJ&hl=zh-CN',
+    //   destination: 'NA',
     // },
 
     {
@@ -2025,6 +2033,7 @@ const data = {
       image: '/members/jiangyi.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=K1hbWlkAAAAJ&hl=en',
+      destination: 'NA',
     },
     {
       name: 'Zexian Hong',
@@ -2037,6 +2046,7 @@ const data = {
       mail: '',
       homepage:
         'https://www.linkedin.com/in/zexian-hong-zach-b7483424a/?locale=zh_CN',
+      destination: 'NA',
     },
     {
       name: 'Heng Jia',
@@ -2047,6 +2057,7 @@ const data = {
       image: '/members/jiaheng.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=n0Mq4wcAAAAJ&hl=en',
+      destination: 'NA',
     },
     {
       name: 'You Qin',
@@ -2059,6 +2070,7 @@ const data = {
       mail: '',
       homepage:
         'https://scholar.google.com/citations?user=qC39v8kAAAAJ&hl=zh-CN',
+      destination: 'NA',
     },
     {
       name: 'Jie Zhang',
@@ -2069,6 +2081,7 @@ const data = {
       image: '/members/zhangjie.png',
       mail: '',
       homepage: '',
+      destination: 'NA',
     },
     {
       name: 'Guohang Zhuang',
@@ -2079,6 +2092,7 @@ const data = {
       image: '/members/guohang.png',
       mail: '',
       homepage: '',
+      destination: 'NA',
     },
     {
       name: 'Pengkun Jiao',
@@ -2089,6 +2103,7 @@ const data = {
       image: '/members/pengkun.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=LT8XmBUAAAAJ&hl=en',
+      destination: 'NA',
     },
     // {
     //   name:'XXX XXX',

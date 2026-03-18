@@ -99,7 +99,9 @@ export const Members = () => {
                 <h3 className="text-3xl font-bold text-text">{member.name}</h3>
               )}
               <p className="mt-3 text-2xl text-textDark leading-relaxed">
-                {description ? `${description} → NA` : 'NA'}
+                {description
+                  ? `${description} → ${member.destination || 'NA'}`
+                  : member.destination || 'NA'}
               </p>
             </article>
           );

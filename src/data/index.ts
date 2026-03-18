@@ -90,6 +90,24 @@ const data = {
   ],
   news: [
     {
+      date: '21 Feb 2026',
+      content:
+        'Nine papers are accepted at CVPR 2026 (seven Main papers and two Findings papers)! Stay tuned for more details!',
+      category: 'paper',
+    },
+    {
+      date: 'Jan 2026',
+      content:
+        'Prof. Zhao Na will serve as the General Chair for the 33rd International Conference on Multimedia Modeling (MMM 2027)!',
+      category: 'service',
+    },
+    {
+      date: 'Jan 2026',
+      content:
+        'One paper about tuning-free long video generation is accepted at ToMM 2026!',
+      category: 'paper',
+    },
+    {
       date: '18 Jan 2026',
       content:
         'We are delighted to welcome Xiaoya Cheng, PhD student from National University of Defense Technology, to join our lab as a visiting student!',
@@ -418,12 +436,12 @@ const data = {
         'Two papers are accepted by ECCV 2024! Congratulations to Pengkun and Yuxuan!',
       category: 'paper',
     },
-    {
-      date: '1 July 2024',
-      content:
-        'We are delighted to welcome Dr. Wang Zhoutao to join our lab as research fellow!',
-      category: 'join',
-    },
+    // {
+    //   date: '1 July 2024',
+    //   content:
+    //     'We are delighted to welcome Dr. Wang Zhoutao to join our lab as research fellow!',
+    //   category: 'join',
+    // },
     {
       date: '22 May 2024',
       content:
@@ -1986,17 +2004,17 @@ const data = {
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=hQZFOQYAAAAJ&hl=en',
     },
-    {
-      name: 'Zhoutao Wang',
-      type: 'Alumni',
-      title: 'Research Fellow',
-      comment: '',
-      bg: 'Ph.D., Nanjing University of Aeronautics and Astronautics',
-      image: '/members/zhoutao.jpg',
-      mail: '',
-      homepage:
-        'https://scholar.google.com.hk/citations?user=Bj29izQAAAAJ&hl=zh-CN',
-    },
+    // {
+    //   name: 'Zhoutao Wang',
+    //   type: 'Alumni',
+    //   title: 'Research Fellow',
+    //   comment: '',
+    //   bg: 'Ph.D., Nanjing University of Aeronautics and Astronautics',
+    //   image: '/members/zhoutao.jpg',
+    //   mail: '',
+    //   homepage:
+    //     'https://scholar.google.com.hk/citations?user=Bj29izQAAAAJ&hl=zh-CN',
+    // },
 
     {
       name: 'Jiangyi Wang',

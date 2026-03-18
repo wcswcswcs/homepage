@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React, { FC } from 'react';
+import { GitHubIcon, MailIcon } from '@/Icons';
 
 interface ButtonProps {
   link: string;
@@ -9,6 +10,15 @@ interface ButtonProps {
 }
 
 const ContactButtons: FC<ButtonProps> = ({ link, name, icon, marginLeft }) => {
+  const iconClassName = 'h-6 w-6 text-current';
+
+  const renderIcon = () => {
+    if (icon === 'github.svg') return <GitHubIcon className={iconClassName} />;
+    if (icon === 'mail.svg') return <MailIcon className={iconClassName} />;
+
+    return <Image alt={name} height={25} src={`/logos/${icon}`} width={25} />;
+  };
+
   return (
     <div>
       <a
@@ -17,7 +27,7 @@ const ContactButtons: FC<ButtonProps> = ({ link, name, icon, marginLeft }) => {
         rel="noreferrer"
         target="_blank"
       >
-        <Image alt={name} height={25} src={`/logos/${icon}`} width={25} />
+        {renderIcon()}
         <span className="ml-2">{name}</span>
       </a>
       <a
@@ -26,7 +36,7 @@ const ContactButtons: FC<ButtonProps> = ({ link, name, icon, marginLeft }) => {
         rel="noreferrer"
         target="_blank"
       >
-        <Image alt={name} height={25} src={`/logos/${icon}`} width={25} />
+        {renderIcon()}
       </a>
     </div>
   );

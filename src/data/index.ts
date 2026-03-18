@@ -11,10 +11,9 @@ const data = {
     for the practical advancement of intelligent machine perception. \
     Our research focus spans across two major areas:',
   intro2:
-    '(1) Computer Vision: 3D computer vision, (3D) scene understanding, 3D reconstruction. ',
+    '(1) 3D Computer Vision: 3D scene understanding, 3D reconstruction, 3D generation and editing.',
   intro3:
-    ' (2) Machine Learning: data-efficient learning, \
-    out-of-distribution learning, multi-modal learning, continual learning, robust learning.',
+    ' (2) Machine Learning: data-efficient learning, multi-modal learning, continual learning, out-of-distribution learning, robust learning. (3) Embodied AI: multi-modal perception, spatial intelligence, embodied navigation, embodied manipulation.',
   about:
     '',
   website: 'https://www.avneesh.tech',

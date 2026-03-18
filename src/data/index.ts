@@ -1953,7 +1953,7 @@ const data = {
       image: '/members/jincheng.png',
       mail: '',
       homepage: 'https://huangjc0429.github.io',
-      destination: 'NA',
+      destination: 'University of Electronic Science and Technology of China',
     },
     {
       name: 'Ziyan Guo (co-advising)',
@@ -2057,7 +2057,7 @@ const data = {
       image: '/members/jiaheng.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=n0Mq4wcAAAAJ&hl=en',
-      destination: 'Alibaba',
+      destination: 'Zhejiang University',
     },
     {
       name: 'You Qin',

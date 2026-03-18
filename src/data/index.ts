@@ -2081,7 +2081,7 @@ const data = {
       image: '/members/zhangjie.png',
       mail: '',
       homepage: '',
-      destination: 'NA',
+      destination: 'Shanghai Enflame Technology',
     },
     {
       name: 'Guohang Zhuang',

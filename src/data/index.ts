@@ -1942,7 +1942,7 @@ const data = {
       image: '/members/fujingyun.png',
       mail: '',
       homepage: '',
-      destination: 'NA',
+      destination: 'Zhejiang University',
     },
     {
       name: 'Jincheng Huang',
@@ -1964,7 +1964,7 @@ const data = {
       image: '/members/ziyan.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=u8E2VQUAAAAJ&hl=en',
-      destination: 'NA',
+      destination: 'Hong Kong University of Science and Technology',
     },
     {
       name: 'Zhihao Yuan',
@@ -1975,7 +1975,7 @@ const data = {
       image: '/members/zhihao.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=jLqS89IAAAAJ&hl=en',
-      destination: 'NA',
+      destination: "Huawei Noah's Ark Lab",
     },
     {
       name: 'Vishal Thengane',
@@ -1986,7 +1986,7 @@ const data = {
       image: '/members/Vishal.png',
       mail: '',
       homepage: 'https://vgthengane.github.io/',
-      destination: 'NA',
+      destination: 'University of Wollongong',
     },
     {
       name: 'Qiongjie Cui',
@@ -1998,7 +1998,7 @@ const data = {
       mail: '',
       homepage:
         'https://scholar.google.com.hk/citations?user=VoPGwJQAAAAJ&hl=zh-CN',
-      destination: 'NA',
+      destination: "Xi'an Jiaotong University",
     },
     {
       name: 'Qun Li',
@@ -2009,7 +2009,7 @@ const data = {
       image: '/members/liqun.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=hQZFOQYAAAAJ&hl=en',
-      destination: 'NA',
+      destination: 'Nanjing University of Posts and Telecommunications',
     },
     // {
     //   name: 'Zhoutao Wang',
@@ -2033,7 +2033,7 @@ const data = {
       image: '/members/jiangyi.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=K1hbWlkAAAAJ&hl=en',
-      destination: 'NA',
+      destination: 'Black Sesame Technologies (Singapore)',
     },
     {
       name: 'Zexian Hong',
@@ -2046,7 +2046,7 @@ const data = {
       mail: '',
       homepage:
         'https://www.linkedin.com/in/zexian-hong-zach-b7483424a/?locale=zh_CN',
-      destination: 'NA',
+      destination: 'Advance Intelligence Group',
     },
     {
       name: 'Heng Jia',
@@ -2057,7 +2057,7 @@ const data = {
       image: '/members/jiaheng.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=n0Mq4wcAAAAJ&hl=en',
-      destination: 'NA',
+      destination: 'Alibaba',
     },
     {
       name: 'You Qin',
@@ -2070,7 +2070,7 @@ const data = {
       mail: '',
       homepage:
         'https://scholar.google.com/citations?user=qC39v8kAAAAJ&hl=zh-CN',
-      destination: 'NA',
+      destination: 'National University of Singapore',
     },
     {
       name: 'Jie Zhang',
@@ -2092,7 +2092,7 @@ const data = {
       image: '/members/guohang.png',
       mail: '',
       homepage: '',
-      destination: 'NA',
+      destination: 'Hefei University of Technology',
     },
     {
       name: 'Pengkun Jiao',
@@ -2103,7 +2103,7 @@ const data = {
       image: '/members/pengkun.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=LT8XmBUAAAAJ&hl=en',
-      destination: 'NA',
+      destination: 'Shanghai Artificial Intelligence Laboratory',
     },
     // {
     //   name:'XXX XXX',

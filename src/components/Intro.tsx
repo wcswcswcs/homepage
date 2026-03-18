@@ -37,6 +37,7 @@ export const Intro = () => {
           <p className="mt-6 text-lg leading-8 text-white/90">{data.intro}</p>
           <p className="text-lg leading-8 text-white/90">{data.intro2}</p>
           <p className="text-lg leading-8 text-white/90">{data.intro3}</p>
+          <p className="text-lg leading-8 text-white/90">{data.intro4}</p>
         </div>
       </div>
     </motion.section>

@@ -49,11 +49,11 @@ const inferNewsCategory = (content: string): NewsCategory => {
     return 'paper';
   }
 
-  if (text.includes('welcome') && text.includes('visit')) {
-    return 'join';
-  }
-
-  if (text.includes('welcome') || text.includes('join our lab')) {
+  if (
+    text.includes('welcome') ||
+    text.includes('visit') ||
+    text.includes('join our lab')
+  ) {
     return 'join';
   }
 

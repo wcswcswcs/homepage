@@ -6,16 +6,7 @@ import { useMemo, useState } from 'react';
 
 type NewsFilter = 'all' | NewsCategory;
 
-const FILTERS: NewsFilter[] = [
-  'all',
-  'paper',
-  'join',
-  'visit',
-  'service',
-  'talk',
-  'grant',
-  'milestone',
-];
+const FILTERS: NewsFilter[] = ['all', 'paper', 'join', 'service', 'grant'];
 
 const inferNewsCategory = (content: string): NewsCategory => {
   const text = content.toLowerCase();
@@ -59,18 +50,35 @@ const inferNewsCategory = (content: string): NewsCategory => {
   }
 
   if (text.includes('welcome') && text.includes('visit')) {
-    return 'visit';
+    return 'join';
   }
 
   if (text.includes('welcome') || text.includes('join our lab')) {
     return 'join';
   }
 
-  return 'milestone';
+  return 'service';
 };
 
 const getNewsCategory = (news: NewType): NewsCategory => {
-  return news.category ?? inferNewsCategory(news.content);
+  if (!news.category) {
+    return inferNewsCategory(news.content);
+  }
+
+  if (news.category === 'talk') {
+    return 'talk';
+  }
+
+  if (news.category === 'join' || news.category === 'visit') {
+    return 'join';
+  }
+
+  if (news.category === 'milestone') {
+    const inferredCategory = inferNewsCategory(news.content);
+    return inferredCategory === 'talk' ? 'service' : inferredCategory;
+  }
+
+  return news.category;
 };
 
 export const News = () => {
@@ -78,11 +86,15 @@ export const News = () => {
   const newsItems = data.news as NewType[];
 
   const filteredNews = useMemo(() => {
+    const visibleNews = newsItems.filter(
+      item => getNewsCategory(item) !== 'talk',
+    );
+
     if (filter === 'all') {
-      return newsItems;
+      return visibleNews;
     }
 
-    return newsItems.filter(item => getNewsCategory(item) === filter);
+    return visibleNews.filter(item => getNewsCategory(item) === filter);
   }, [filter, newsItems]);
 
   return (

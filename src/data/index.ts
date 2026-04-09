@@ -672,7 +672,7 @@ const data = {
       date: '15 Nov 2022',
       content:
         'Prof. Zhao Na is invited to join the Organising Committee of IEEE ICME 2023 Workshop on 3D Multimedia Analytics, Search and Generation!',
-      category: 'talk',
+      category: 'service',
     },
     // {
     //       date:'02 Nov 2022',

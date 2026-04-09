@@ -36,8 +36,35 @@ data.members.forEach(item => {
   }
 });
 
+const ALUMNI_SECTIONS: Array<'Research Staff' | 'Visitors' | 'Graduate'> = [
+  'Research Staff',
+  'Visitors',
+  'Graduate',
+];
+
+const getAlumniGroup = (member: MemberType): 'Research Staff' | 'Visitors' | 'Graduate' => {
+  if (member.alumniGroup) {
+    return member.alumniGroup;
+  }
+
+  const text = `${member.title} ${member.comment}`.toLowerCase();
+
+  if (text.includes('visiting')) {
+    return 'Visitors';
+  }
+
+  if (text.includes('research fellow') || text.includes('research assistant')) {
+    return 'Research Staff';
+  }
+
+  return 'Graduate';
+};
+
 const getAlumniDescription = (member: MemberType) => {
-  return [member.title, member.comment, member.bg].filter(Boolean).join(' · ');
+  const role = member.role || member.title || member.comment;
+  const destination = member.destination || 'NA';
+
+  return [role, member.bg].filter(Boolean).join(', ') + ` → ${destination}`;
 };
 
 export const Members = () => {
@@ -82,28 +109,42 @@ export const Members = () => {
       </div>
 
       <Title title="Alumni" />
-      <div className="mt-10 w-full space-y-8">
-        {Alumni.map((member, i) => {
-          const description = getAlumniDescription(member);
+      <div className="mt-10 w-full space-y-10">
+        {ALUMNI_SECTIONS.map(section => {
+          const items = Alumni.filter(member => getAlumniGroup(member) === section);
+
+          if (items.length === 0) {
+            return null;
+          }
 
           return (
-            <article key={i}>
-              {member.homepage ? (
-                <a
-                  className="text-3xl font-bold text-text underline-offset-4 hover:underline"
-                  href={member.homepage}
-                >
-                  {member.name}
-                </a>
-              ) : (
-                <h3 className="text-3xl font-bold text-text">{member.name}</h3>
-              )}
-              <p className="mt-3 text-2xl text-textDark leading-relaxed">
-                {description
-                  ? `${description} → ${member.destination || 'NA'}`
-                  : member.destination || 'NA'}
-              </p>
-            </article>
+            <section key={section}>
+              <h3 className="text-2xl font-bold text-text">{section}</h3>
+              <div className="mt-4 space-y-6">
+                {items.map((member, i) => {
+                  const description = getAlumniDescription(member);
+
+                  return (
+                    <article key={`${section}-${member.name}-${i}`}>
+                      {member.homepage ? (
+                        <a
+                          className="text-2xl font-semibold text-text underline-offset-4 hover:underline"
+                          href={member.homepage}
+                        >
+                          {member.name}
+                        </a>
+                      ) : (
+                        <h4 className="text-2xl font-semibold text-text">{member.name}</h4>
+                      )}
+                      <p className="mt-2 text-xl leading-relaxed text-textDark">
+                        {description}
+                        {member.period ? ` · ${member.period}` : ''}
+                      </p>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
           );
         })}
       </div>

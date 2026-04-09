@@ -1832,7 +1832,7 @@ const data = {
     //   homepage:''
     // },
     {
-      name: 'Ling Ma',
+      name: 'Lin Ma',
       type: 'Visitor',
       title: 'Visiting Professor',
       comment: '',
@@ -2003,7 +2003,7 @@ const data = {
       role: "master's student, co-supervisor",
     },
     {
-      name: 'Zhihao Yuan',
+      name: 'Zihao Yuan',
       type: 'Alumni',
       title: 'Visiting Student',
       comment: '',

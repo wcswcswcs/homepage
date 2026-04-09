@@ -61,24 +61,7 @@ const inferNewsCategory = (content: string): NewsCategory => {
 };
 
 const getNewsCategory = (news: NewType): NewsCategory => {
-  if (!news.category) {
-    return inferNewsCategory(news.content);
-  }
-
-  if (news.category === 'talk') {
-    return 'talk';
-  }
-
-  if (news.category === 'join' || news.category === 'visit') {
-    return 'join';
-  }
-
-  if (news.category === 'milestone') {
-    const inferredCategory = inferNewsCategory(news.content);
-    return inferredCategory === 'talk' ? 'service' : inferredCategory;
-  }
-
-  return news.category;
+  return news.category ?? inferNewsCategory(news.content);
 };
 
 export const News = () => {
@@ -86,9 +69,7 @@ export const News = () => {
   const newsItems = data.news as NewType[];
 
   const filteredNews = useMemo(() => {
-    const visibleNews = newsItems.filter(
-      item => getNewsCategory(item) !== 'talk',
-    );
+    const visibleNews = newsItems.filter(item => getNewsCategory(item) !== 'talk');
 
     if (filter === 'all') {
       return visibleNews;

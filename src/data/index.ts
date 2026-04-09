@@ -111,7 +111,7 @@ const data = {
       date: '18 Jan 2026',
       content:
         'We are delighted to welcome Xiaoya Cheng, PhD student from National University of Defense Technology, to join our lab as a visiting student!',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '8 Jan 2026',
@@ -141,7 +141,7 @@ const data = {
       date: '19 Nov 2025',
       content:
         'We are delighted to welcome Prof. Ma Ling, an associate professor from Nankai University, to our lab as a visiting professor!',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '8 Nov 2025',
@@ -153,7 +153,7 @@ const data = {
       date: '29 Oct 2025',
       content:
         'We are delighted to welcome Wu Lei and Yu Jiale, PhD students from Harbin Institute of Technology and Beijing Jiaotong University, to our lab as visiting students!',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '28 Oct 2025',
@@ -189,7 +189,7 @@ const data = {
       date: '5 Sep 2025',
       content:
         'We are delighted to welcome Pei Xuetong, a master student from Beihang University, to visit our lab!',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '23 Aug 2025',
@@ -206,7 +206,7 @@ const data = {
       date: '15 Aug 2025',
       content:
         "We are delighted to welcome Zhu Haiming, a master's graduate from Tsinghua SIGS, to join our lab as a visiting researcher!",
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '7 Jul 2025',
@@ -224,7 +224,7 @@ const data = {
       date: '1 Jul 2025',
       content:
         'We are delighted to welcome Yuan Shangbo, a PhD student from UESTC, to visit our lab!',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '26 Jun 2025',
@@ -241,7 +241,7 @@ const data = {
       date: '20 May 2025',
       content:
         'We are delighted to welcome Zhu Yun, a PhD student from NJUST, to visit our lab!',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '19 May 2025',
@@ -307,7 +307,7 @@ const data = {
       date: '13 Feb 2025',
       content:
         'We are delighted to welcome Yuan Zhihao, a PhD student from CUHK (SZ), to visit our lab!',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '10 Feb 2025',
@@ -355,7 +355,7 @@ const data = {
       date: '25 Nov 2024',
       content:
         'We are delighted to welcome Fu Jingyun, a PhD student from ZJU, to visit our lab!',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '15 Nov 2024',
@@ -397,7 +397,7 @@ const data = {
       date: '18 Aug 2024',
       content:
         'Congratulations to Prof. Zhao Na on her new appointment as a Technical Committee Member for IEEE-CAS Multimedia Systems and Applications (MSA).',
-      category: 'milestone',
+      category: 'service',
     },
     // {
     //   date:'18 August 2024',
@@ -407,7 +407,7 @@ const data = {
       date: '15 Aug 2024',
       content:
         'We are delighted to welcome Wang Xinyi, a PhD student from USTC, to visit our lab!',
-      category: 'visit',
+      category: 'join',
     },
     // {
     //   date:'13 August 2024',
@@ -452,13 +452,13 @@ const data = {
       date: '18 Apr 2024',
       content:
         'Prof. Zhao Na is invited to chair a session at ICRA 2024, Japan',
-      category: 'milestone',
+      category: 'service',
     },
     {
       date: '26 Mar 2024',
       content:
         'Congratulations to Wu Yuchen on receiving the SUTD PhD scholarship! He will be joining us as a PhD student in September 2024.',
-      category: 'milestone',
+      category: 'service',
     },
     {
       date: '22 Mar 2024',
@@ -470,7 +470,7 @@ const data = {
       date: '11 Mar 2024',
       content:
         'Congratulations to Hong Zexian for obtaining his master’s degree from NTU and continuing as a senior research assistant with us!',
-      category: 'milestone',
+      category: 'service',
     },
     {
       date: '1 Mar 2024',
@@ -488,7 +488,7 @@ const data = {
       date: '12 Feb 2024',
       content:
         'We are thrilled to welcome Prof. Liao Yiyi, our collaborator on the SUTD-ZJU project, for a two-week visit to our lab!',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '29 Jan 2024',
@@ -504,7 +504,7 @@ const data = {
       date: '08 Jan 2024',
       content:
         'We are delighted to welcome Zhang Jie, a master student from XJUT, to visit our lab.',
-      category: 'visit',
+      category: 'join',
     },
     // {
     //   date:'23 Dec 2023',
@@ -536,7 +536,7 @@ const data = {
       date: '14 Oct 2023',
       content:
         'We are delighted to welcome Zhuang Guohang, a PhD student from HFUT, to visit our lab.',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '15 Sep 2023',
@@ -558,7 +558,7 @@ const data = {
       date: '19 Aug 2023',
       content:
         'We are delighted to welcome Jia Heng, a PhD student from ZJU, to visit our lab.',
-      category: 'visit',
+      category: 'join',
     },
     {
       date: '25 Aug 2023',
@@ -634,7 +634,7 @@ const data = {
       date: '25 Apr 2023',
       content:
         'We are delighted to welcome Jiao Pengkun, a PhD student from FDU, to visit our lab.',
-      category: 'visit',
+      category: 'join',
     },
     // {
     //       date:'09 Apr 2023',
@@ -698,7 +698,7 @@ const data = {
       date: '01 Aug 2022',
       content:
         'Prof. Zhao Na joins the Singapore University of Technology and Design as an Assistant Professor!',
-      category: 'milestone',
+      category: 'service',
     },
 
     // {

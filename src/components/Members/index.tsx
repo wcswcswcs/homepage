@@ -127,23 +127,20 @@ const hasSameInstitution = (text: string, destination?: string) => {
   );
 };
 
-const getAlumniDescription = (member: MemberType) => {
+const getAlumniSummary = (member: MemberType) => {
   const role = member.role || member.title || member.comment;
   const destination = member.destination || 'NA';
   const deduplicatedBg = removeDuplicatedInstitution(member.bg, destination);
-  const description = [role, deduplicatedBg].filter(Boolean).join(', ');
   const shouldHideDestination = hasSameInstitution(
     [role, member.bg].filter(Boolean).join(', '),
     destination,
   );
 
-  if (!description) {
-    return destination;
-  }
-
-  return shouldHideDestination
-    ? description
-    : `${description} → ${destination}`;
+  return {
+    role,
+    background: deduplicatedBg,
+    destination: shouldHideDestination ? '' : destination,
+  };
 };
 
 export const Members = () => {
@@ -203,10 +200,13 @@ export const Members = () => {
               <h3 className="text-2xl font-bold text-text">{section}</h3>
               <div className="mt-4 space-y-6">
                 {items.map((member, i) => {
-                  const description = getAlumniDescription(member);
+                  const summary = getAlumniSummary(member);
 
                   return (
-                    <article key={`${section}-${member.name}-${i}`}>
+                    <article
+                      key={`${section}-${member.name}-${i}`}
+                      className="rounded-lg border border-textDark/10 bg-card/70 p-5 shadow-sm"
+                    >
                       {member.homepage ? (
                         <a
                           className="text-2xl font-semibold text-text underline-offset-4 hover:underline"
@@ -219,10 +219,20 @@ export const Members = () => {
                           {member.name}
                         </h4>
                       )}
-                      <p className="mt-2 text-xl leading-relaxed text-textDark">
-                        {description}
-                        {member.period ? ` · ${member.period}` : ''}
-                      </p>
+                      <div className="mt-3 space-y-2 text-lg leading-relaxed text-textDark">
+                        {summary.role ? <p>{summary.role}</p> : null}
+                        {summary.background ? (
+                          <p>{summary.background}</p>
+                        ) : null}
+                        {summary.destination ? (
+                          <p>→ {summary.destination}</p>
+                        ) : null}
+                        {member.period ? (
+                          <p className="text-base text-textDark/90">
+                            {member.period}
+                          </p>
+                        ) : null}
+                      </div>
                     </article>
                   );
                 })}

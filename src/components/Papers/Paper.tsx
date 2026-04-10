@@ -51,12 +51,6 @@ export const Paper: FC<IPaperProps> = ({ paper }) => {
     textDecoration: 'underline',
   };
 
-  const getAuthorBarHeightClass = (authors: string[]) =>
-    authors.filter(author => !author.startsWith('#') && !author.startsWith('*'))
-      .length > 4
-      ? 'h-16'
-      : 'h-8';
-
   return (
     <article className="mb-6 flex transform flex-col rounded-lg border border-textDark/20 bg-card p-6 shadow-sm transition-transform hover:-translate-y-1 md:flex-row">
       <Image
@@ -69,14 +63,8 @@ export const Paper: FC<IPaperProps> = ({ paper }) => {
       />
       <div className="ml-2 mt-5 md:ml-20 md:mt-0">
         <h3 className="text-2xl font-semibold text-text">{paper.title}</h3>
-        <div className="mt-3 flex items-start gap-3">
-          <span
-            aria-hidden="true"
-            className={`mt-2 w-[8px] rounded-sm bg-text/50 ${getAuthorBarHeightClass(
-              paper.authors,
-            )}`}
-          />
-          <div className="flex-1">
+        <div className="mt-3 border-l-4 border-text/50 pl-3">
+          <div>
             {paper.authors.map((author, i) =>
               author.startsWith('#') || author.startsWith('*') ? (
                 <span key={`${author}-${i}`} className="text-textDark">

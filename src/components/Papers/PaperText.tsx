@@ -50,24 +50,12 @@ export const PaperText: FC<IPaperProps> = ({ paper }) => {
     textDecoration: 'underline',
   };
 
-  const getAuthorBarHeightClass = (authors: string[]) =>
-    authors.filter(author => !author.startsWith('#') && !author.startsWith('*'))
-      .length > 4
-      ? 'h-16'
-      : 'h-8';
-
   return (
     <article className="mb-5 flex flex-col items-center border-b border-textDark/20 pb-5 md:flex-row">
       <div className="mb-2 ml-2 mt-10 md:ml-5 md:mt-0">
         <h3 className="text-base font-semibold text-text">{paper.title}</h3>
-        <div className="mt-3 flex items-start gap-3">
-          <span
-            aria-hidden="true"
-            className={`mt-2 w-[8px] rounded-sm bg-text/50 ${getAuthorBarHeightClass(
-              paper.authors,
-            )}`}
-          />
-          <div className="flex-1">
+        <div className="mt-3 border-l-4 border-text/50 pl-3">
+          <div>
             {paper.authors.map((author, i) =>
               author.startsWith('#') || author.startsWith('*') ? (
                 <span key={`${author}-${i}`} className="text-textDark">

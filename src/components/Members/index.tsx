@@ -127,8 +127,26 @@ const hasSameInstitution = (text: string, destination?: string) => {
   );
 };
 
+const capitalizeRole = (role?: string) => {
+  if (!role) {
+    return '';
+  }
+
+  return role
+    .split(/\s+/)
+    .filter(Boolean)
+    .map(word => {
+      if (word === word.toUpperCase()) {
+        return word;
+      }
+
+      return `${word[0].toUpperCase()}${word.slice(1).toLowerCase()}`;
+    })
+    .join(' ');
+};
+
 const getAlumniSummary = (member: MemberType) => {
-  const role = member.role || member.title || member.comment;
+  const role = capitalizeRole(member.role || member.title || member.comment);
   const destination = member.destination || 'NA';
   const deduplicatedBg = removeDuplicatedInstitution(member.bg, destination);
   const shouldHideDestination = hasSameInstitution(

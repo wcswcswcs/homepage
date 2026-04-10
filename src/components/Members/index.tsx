@@ -10,7 +10,26 @@ const Visitors: MemberType[] = [];
 const Alumni: MemberType[] = [];
 const Masters: MemberType[] = [];
 
-data.members.forEach(item => {
+const normalizeAlumniGroup = (
+  alumniGroup?: string,
+): MemberType['alumniGroup'] => {
+  if (
+    alumniGroup === 'Research Staff' ||
+    alumniGroup === 'Visitors' ||
+    alumniGroup === 'Graduate'
+  ) {
+    return alumniGroup;
+  }
+
+  return undefined;
+};
+
+const members: MemberType[] = data.members.map(item => ({
+  ...item,
+  alumniGroup: normalizeAlumniGroup(item.alumniGroup),
+}));
+
+members.forEach(item => {
   switch (item.type) {
     case 'Faculty':
       Faculty.push(item);

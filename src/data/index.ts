@@ -1740,7 +1740,7 @@ const data = {
       mail: 'jie_xu2@sutd.edu.sg',
       homepage: 'https://scholar.google.com/citations?user=YT1_9swAAAAJ&hl=en',
       period: 'February, 2025 – present',
-      role: 'research fellow',
+      role: 'Research Fellow',
     },
 
     {
@@ -1754,7 +1754,7 @@ const data = {
       homepage:
         'https://scholar.google.com/citations?user=AFsLiBcAAAAJ&hl=zh-CN',
       period: 'April, 2025 – present',
-      role: 'research fellow',
+      role: 'Research Fellow',
     },
 
     {
@@ -1768,7 +1768,7 @@ const data = {
       homepage:
         'https://scholar.google.com/citations?user=CVP8vGEAAAAJ&hl=zh-CN',
       period: 'April, 2025 – present',
-      role: 'senior research assistant',
+      role: 'Senior Research Assistant',
     },
     {
       name: 'Kun Wang',
@@ -1780,7 +1780,7 @@ const data = {
       mail: '',
       homepage: 'https://w2kun.github.io/',
       period: 'July, 2025 – present',
-      role: 'research fellow',
+      role: 'Research Fellow',
     },
     {
       name: 'Yanpeng Sun',
@@ -1793,7 +1793,7 @@ const data = {
       homepage:
         'https://scholar.google.com/citations?user=a3FI8c4AAAAJ&hl=zh-CN',
       period: 'September, 2025 – present',
-      role: 'research fellow',
+      role: 'Research Fellow',
     },
     {
       name: 'Jian Liu',
@@ -1805,7 +1805,7 @@ const data = {
       mail: 'jianliu666.cn@gmail.com',
       homepage: 'https://cnjliu.github.io/',
       period: 'January, 2026 – present',
-      role: 'research fellow',
+      role: 'Research Fellow',
     },
     {
       name: 'Anweshan Bor',
@@ -1818,7 +1818,7 @@ const data = {
       mail: '',
       homepage: 'https://www.linkedin.com/in/anweshanbor/?originalSubdomain=sg',
       period: 'May, 2025 – present',
-      role: 'senior research assistant',
+      role: 'Senior Research Assistant',
     },
 
     // {
@@ -1841,7 +1841,7 @@ const data = {
       mail: '',
       homepage: 'https://csen.nankai.edu.cn/info/1028/1068.htm',
       period: 'November, 2025 – present',
-      role: 'visiting Professor, Nankai University',
+      role: 'Visiting Professor, Nankai University',
     },
     {
       name: 'Xinyi Wang',
@@ -1876,7 +1876,7 @@ const data = {
       homepage:
         'https://scholar.google.com.hk/citations?user=eIZeK58AAAAJ&hl=zh-CN',
       period: 'May, 2025 – present',
-      role: 'visiting Ph.D. student, NJUST',
+      role: 'Visiting Ph.D. Student, NJUST',
     },
     {
       name: 'Shangbo Yuan',
@@ -1889,7 +1889,7 @@ const data = {
       homepage:
         'https://scholar.google.com/citations?user=2_S2Fc0AAAAJ&hl=zh-CN',
       period: 'July, 2025 – present',
-      role: 'visiting Ph.D. student, UESTC',
+      role: 'Visiting Ph.D. Student, UESTC',
     },
     {
       name: 'Haiming Zhu',
@@ -1901,7 +1901,7 @@ const data = {
       mail: '',
       homepage: '',
       period: 'August, 2025 – present',
-      role: 'visiting researcher, Tsinghua SIGS',
+      role: 'Visiting Researcher, Tsinghua SIGS',
     },
     {
       name: 'Xuetong Pei',
@@ -1913,7 +1913,7 @@ const data = {
       mail: '',
       homepage: '',
       period: 'September, 2025 – present',
-      role: "visiting master's student, Beihang University",
+      role: "Visiting Master's Student, Beihang University",
     },
     {
       name: 'Lei Wu',
@@ -1925,7 +1925,7 @@ const data = {
       mail: '',
       homepage: '',
       period: 'October, 2025 – present',
-      role: 'visiting Ph.D. student, Harbin Institute of Technology',
+      role: 'Visiting Ph.D. Student, Harbin Institute of Technology',
     },
     {
       name: 'Jiale Yu',
@@ -1937,7 +1937,7 @@ const data = {
       mail: '',
       homepage: 'https://orcid.org/0000-0002-9335-0151',
       period: 'October, 2025 – present',
-      role: 'visiting Ph.D. student, Beijing Jiaotong University',
+      role: 'Visiting Ph.D. Student, Beijing Jiaotong University',
     },
     {
       name: 'Xiaoya Cheng',
@@ -1949,7 +1949,7 @@ const data = {
       mail: '',
       homepage: '',
       period: 'January, 2026 – present',
-      role: 'visiting Ph.D. student, NUDT',
+      role: 'Visiting Ph.D. Student, NUDT',
     },
 
     {
@@ -1975,7 +1975,7 @@ const data = {
       destination: 'Zhejiang University',
       period: 'November, 2024 – November, 2025',
       alumniGroup: 'Visitors',
-      role: 'visiting Ph.D. student, Zhejiang University',
+      role: 'Visiting Ph.D. Student, Zhejiang University',
     },
     {
       name: 'Jincheng Huang',
@@ -2000,7 +2000,7 @@ const data = {
       destination: 'Ph.D. student, HKUST',
       period: 'January 2024 – July 2025',
       alumniGroup: 'Graduate',
-      role: "master's student, co-supervisor",
+      role: "Master's Student, Co-supervisor",
     },
     {
       name: 'Zihao Yuan',
@@ -2014,7 +2014,7 @@ const data = {
       destination: 'Research Scientist, Huawei',
       period: 'February – June, 2025',
       alumniGroup: 'Visitors',
-      role: 'visiting Ph.D. student, CUHK-SZ',
+      role: 'Visiting Ph.D. Student, CUHK-SZ',
     },
     {
       name: 'Vishal Thengane',
@@ -2028,7 +2028,7 @@ const data = {
       destination: 'University of Wollongong',
       period: 'August, 2024 – May, 2025',
       alumniGroup: 'Visitors',
-      role: 'visiting Ph.D. student, University of Surrey',
+      role: 'Visiting Ph.D. Student, University of Surrey',
     },
     {
       name: 'Qiongjie Cui',
@@ -2043,7 +2043,7 @@ const data = {
       destination: "Assoc. Professor, Xi'an Jiaotong University",
       period: 'March, 2024 – May, 2025',
       alumniGroup: 'Research Staff',
-      role: 'research fellow',
+      role: 'Research Fellow',
     },
     {
       name: 'Qun Li',
@@ -2057,7 +2057,7 @@ const data = {
       destination: 'Nanjing University of Posts and Telecommunications',
       period: 'August, 2024 – March, 2025',
       alumniGroup: 'Visitors',
-      role: 'visiting Professor, NUPT',
+      role: 'Visiting Professor, NUPT',
     },
     // {
     //   name: 'Zhoutao Wang',
@@ -2084,7 +2084,7 @@ const data = {
       destination: 'Engineer, Black Sesame Technology',
       period: 'March – December, 2024',
       alumniGroup: 'Research Staff',
-      role: 'senior research assistant',
+      role: 'Senior Research Assistant',
     },
     {
       name: 'Zexian Hong',
@@ -2100,7 +2100,7 @@ const data = {
       destination: 'Data Scientist, Atome',
       period: 'March – September, 2024',
       alumniGroup: 'Research Staff',
-      role: 'senior research assistant',
+      role: 'Senior Research Assistant',
     },
     {
       name: 'Heng Jia',
@@ -2127,7 +2127,7 @@ const data = {
       destination: 'Ph.D. student, NUS',
       period: 'March – August, 2024',
       alumniGroup: 'Research Staff',
-      role: 'senior research assistant',
+      role: 'Senior Research Assistant',
     },
     {
       name: 'Jie Zhang',
@@ -2141,7 +2141,7 @@ const data = {
       destination: 'Engineer, Enflame Technology',
       period: 'January – June, 2024',
       alumniGroup: 'Visitors',
-      role: "visiting master's student, XJTU",
+      role: "Visiting Master's Student, XJTU",
     },
     {
       name: 'Guohang Zhuang',
@@ -2155,7 +2155,7 @@ const data = {
       destination: 'Hefei University of Technology',
       period: 'October, 2023 – January, 2024',
       alumniGroup: 'Visitors',
-      role: 'visiting Ph.D. student, HFUT',
+      role: 'Visiting Ph.D. Student, HFUT',
     },
     {
       name: 'Pengkun Jiao',
@@ -2168,7 +2168,7 @@ const data = {
       homepage: 'https://scholar.google.com/citations?user=LT8XmBUAAAAJ&hl=en',
       destination: 'Shanghai Artificial Intelligence Laboratory',
       alumniGroup: 'Visitors',
-      role: 'visiting Ph.D. student, Fudan University',
+      role: 'Visiting Ph.D. Student, Fudan University',
     },
     // {
     //   name:'XXX XXX',

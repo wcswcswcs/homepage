@@ -82,7 +82,6 @@ const removeDuplicatedInstitution = (text: string, destination?: string) => {
   if (segments.length > 1) {
     const lastSegment = segments[segments.length - 1];
     const normalizedLastSegment = normalizeText(lastSegment);
-
     if (
       normalizedLastSegment === normalizedDestination ||
       normalizedLastSegment === normalizedPrimaryDestination ||

@@ -1836,7 +1836,7 @@ const data = {
       type: 'Visitor',
       title: 'Visiting Professor',
       comment: '',
-      bg: 'Associate Professor, Nankai University COLLEGE OF SOFTWARE',
+      bg: 'Associate Professor, Nankai University College of Software',
       image: '/members/maling.png',
       mail: '',
       homepage: 'https://csen.nankai.edu.cn/info/1028/1068.htm',
@@ -2113,7 +2113,7 @@ const data = {
       period: 'Aug, 2023 – June, 2024',
       homepage: 'https://scholar.google.com/citations?user=n0Mq4wcAAAAJ&hl=en',
       destination: 'Zhejiang University',
-      role: 'Ph.D. Student',
+      role: 'Visiting Ph.D. Student',
     },
     {
       name: 'You Qin',

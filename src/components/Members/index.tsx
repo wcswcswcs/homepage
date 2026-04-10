@@ -101,14 +101,49 @@ const removeDuplicatedInstitution = (text: string, destination?: string) => {
   return text;
 };
 
+const hasSameInstitution = (text: string, destination?: string) => {
+  if (!text || !destination) {
+    return false;
+  }
+
+  const primaryDestination = destination.split('·')[0].trim();
+  const normalizedPrimaryDestination = normalizeText(primaryDestination);
+  const normalizedText = normalizeText(text);
+
+  const textSegments = text
+    .split(',')
+    .map(segment => segment.trim())
+    .filter(Boolean)
+    .map(segment => normalizeText(segment));
+
+  return (
+    normalizedText.includes(normalizedPrimaryDestination) ||
+    textSegments.some(
+      segment =>
+        segment === normalizedPrimaryDestination ||
+        normalizedPrimaryDestination.includes(segment) ||
+        segment.includes(normalizedPrimaryDestination),
+    )
+  );
+};
+
 const getAlumniDescription = (member: MemberType) => {
   const role = member.role || member.title || member.comment;
   const destination = member.destination || 'NA';
   const deduplicatedBg = removeDuplicatedInstitution(member.bg, destination);
-
-  return (
-    [role, deduplicatedBg].filter(Boolean).join(', ') + ` → ${destination}`
+  const description = [role, deduplicatedBg].filter(Boolean).join(', ');
+  const shouldHideDestination = hasSameInstitution(
+    [role, member.bg].filter(Boolean).join(', '),
+    destination,
   );
+
+  if (!description) {
+    return destination;
+  }
+
+  return shouldHideDestination
+    ? description
+    : `${description} → ${destination}`;
 };
 
 export const Members = () => {

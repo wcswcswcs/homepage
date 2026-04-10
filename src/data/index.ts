@@ -2110,6 +2110,7 @@ const data = {
       bg: 'PhD student, Zhejiang University',
       image: '/members/jiaheng.png',
       mail: '',
+      period: 'Aug, 2023 – June, 2024',
       homepage: 'https://scholar.google.com/citations?user=n0Mq4wcAAAAJ&hl=en',
       destination: 'Zhejiang University',
     },
@@ -2168,6 +2169,7 @@ const data = {
       homepage: 'https://scholar.google.com/citations?user=LT8XmBUAAAAJ&hl=en',
       destination: 'Shanghai Artificial Intelligence Laboratory',
       alumniGroup: 'Visitors',
+      period: 'April, 2023 – January, 2024',
       role: 'Visiting Ph.D. Student',
     },
     // {

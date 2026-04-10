@@ -1975,7 +1975,7 @@ const data = {
       destination: 'Zhejiang University',
       period: 'November, 2024 – November, 2025',
       alumniGroup: 'Visitors',
-      role: 'Visiting Ph.D. Student, Zhejiang University',
+      role: 'Visiting Ph.D. Student',
     },
     {
       name: 'Jincheng Huang',
@@ -1993,14 +1993,14 @@ const data = {
       type: 'Alumni',
       title: '',
       comment: '',
-      bg: "master's student, co-supervisor",
+      bg: 'Co-supervisor',
       image: '/members/ziyan.png',
       mail: '',
       homepage: 'https://scholar.google.com/citations?user=u8E2VQUAAAAJ&hl=en',
       destination: 'Ph.D. student, HKUST',
       period: 'January 2024 – July 2025',
       alumniGroup: 'Graduate',
-      role: "Master's Student, Co-supervisor",
+      role: "Master's Student",
     },
     {
       name: 'Zihao Yuan',
@@ -2014,7 +2014,7 @@ const data = {
       destination: 'Research Scientist, Huawei',
       period: 'February – June, 2025',
       alumniGroup: 'Visitors',
-      role: 'Visiting Ph.D. Student, CUHK-SZ',
+      role: 'Visiting Ph.D. Student',
     },
     {
       name: 'Vishal Thengane',
@@ -2028,7 +2028,7 @@ const data = {
       destination: 'University of Wollongong',
       period: 'August, 2024 – May, 2025',
       alumniGroup: 'Visitors',
-      role: 'Visiting Ph.D. Student, University of Surrey',
+      role: 'Visiting Ph.D. Student',
     },
     {
       name: 'Qiongjie Cui',
@@ -2141,7 +2141,7 @@ const data = {
       destination: 'Engineer, Enflame Technology',
       period: 'January – June, 2024',
       alumniGroup: 'Visitors',
-      role: "Visiting Master's Student, XJTU",
+      role: "Visiting Master's Student",
     },
     {
       name: 'Guohang Zhuang',
@@ -2155,7 +2155,7 @@ const data = {
       destination: 'Hefei University of Technology',
       period: 'October, 2023 – January, 2024',
       alumniGroup: 'Visitors',
-      role: 'Visiting Ph.D. Student, HFUT',
+      role: 'Visiting Ph.D. Student',
     },
     {
       name: 'Pengkun Jiao',
@@ -2168,7 +2168,7 @@ const data = {
       homepage: 'https://scholar.google.com/citations?user=LT8XmBUAAAAJ&hl=en',
       destination: 'Shanghai Artificial Intelligence Laboratory',
       alumniGroup: 'Visitors',
-      role: 'Visiting Ph.D. Student, Fudan University',
+      role: 'Visiting Ph.D. Student',
     },
     // {
     //   name:'XXX XXX',

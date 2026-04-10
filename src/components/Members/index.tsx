@@ -63,43 +63,6 @@ const getAlumniGroup = (
 };
 
 const normalizeText = (text: string) => text.trim().toLowerCase();
-const escapeRegExp = (text: string) =>
-  text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-const removeDuplicatedInstitution = (text: string, destination?: string) => {
-  if (!text || !destination) {
-    return text;
-  }
-
-  const normalizedDestination = normalizeText(destination);
-  const primaryDestination = destination.split('·')[0].trim();
-  const normalizedPrimaryDestination = normalizeText(primaryDestination);
-  const segments = text
-    .split(',')
-    .map(segment => segment.trim())
-    .filter(Boolean);
-
-  if (segments.length > 1) {
-    const lastSegment = segments[segments.length - 1];
-    const normalizedLastSegment = normalizeText(lastSegment);
-    if (
-      normalizedLastSegment === normalizedDestination ||
-      normalizedLastSegment === normalizedPrimaryDestination ||
-      normalizedDestination.includes(normalizedLastSegment)
-    ) {
-      return segments.slice(0, -1).join(', ');
-    }
-  }
-
-  if (normalizeText(text).includes(normalizedPrimaryDestination)) {
-    return text
-      .replace(new RegExp(escapeRegExp(primaryDestination), 'ig'), '')
-      .replace(/\s*,\s*$/, '')
-      .trim();
-  }
-
-  return text;
-};
 
 const hasSameInstitution = (text: string, destination?: string) => {
   if (!text || !destination) {
@@ -197,9 +160,7 @@ const getAlumniSummary = (member: MemberType) => {
     destination,
   );
   const shouldHideDestination = isVisitor && sameInstitution;
-  const backgroundSource = shouldHideDestination
-    ? member.bg
-    : removeDuplicatedInstitution(member.bg, destination);
+  const backgroundSource = member.bg;
   const background = shouldHideBackground(role, backgroundSource)
     ? ''
     : backgroundSource;

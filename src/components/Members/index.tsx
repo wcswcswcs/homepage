@@ -186,7 +186,7 @@ export const Members = () => {
 
       <Title title="Alumni" />
       <div className="mt-10 w-full space-y-10">
-        {ALUMNI_SECTIONS.map(section => {
+        {ALUMNI_SECTIONS.map((section, sectionIndex) => {
           const items = Alumni.filter(
             member => getAlumniGroup(member) === section,
           );
@@ -196,7 +196,12 @@ export const Members = () => {
           }
 
           return (
-            <section key={section}>
+            <section
+              className={
+                sectionIndex === 0 ? '' : 'border-t border-textDark/10 pt-8'
+              }
+              key={section}
+            >
               <h3 className="text-2xl font-bold text-text">{section}</h3>
               <div className="mt-4 space-y-6">
                 {items.map((member, i) => {

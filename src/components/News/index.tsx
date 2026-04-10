@@ -6,10 +6,7 @@ import { NewType, NewsCategory } from '@/types';
 import { Title } from '../Common/Title';
 import { New } from './New';
 
-type VisibleNewsCategory = Exclude<
-  NewsCategory,
-  'visit' | 'milestone' | 'talk'
->;
+type VisibleNewsCategory = Exclude<NewsCategory, 'talk'>;
 type NewsFilter = 'all' | VisibleNewsCategory;
 
 const FILTERS: NewsFilter[] = ['all', 'paper', 'join', 'service', 'grant'];
@@ -67,14 +64,6 @@ const inferNewsCategory = (content: string): NewsCategory => {
 };
 
 const normalizeNewsCategory = (category: NewsCategory): NewsFilter | 'talk' => {
-  if (category === 'visit') {
-    return 'join';
-  }
-
-  if (category === 'milestone') {
-    return 'service';
-  }
-
   return category;
 };
 

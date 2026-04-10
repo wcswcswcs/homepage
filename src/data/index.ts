@@ -2057,7 +2057,7 @@ const data = {
       destination: 'Nanjing University of Posts and Telecommunications',
       period: 'August, 2024 – March, 2025',
       alumniGroup: 'Visitors',
-      role: 'Visiting Professor, NUPT',
+      role: 'Visiting Professor, Nanjing University of Posts and Telecommunications',
     },
     // {
     //   name: 'Zhoutao Wang',
@@ -2124,7 +2124,7 @@ const data = {
       mail: '',
       homepage:
         'https://scholar.google.com/citations?user=qC39v8kAAAAJ&hl=zh-CN',
-      destination: 'Ph.D. student, NUS',
+      destination: 'Ph.D. student, National University of Singapore',
       period: 'March – August, 2024',
       alumniGroup: 'Research Staff',
       role: 'Senior Research Assistant',

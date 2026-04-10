@@ -164,13 +164,39 @@ const shouldHideBackground = (role: string, background: string) => {
   );
 };
 
+const getInstitutionFromText = (text: string) => {
+  const segments = text
+    .split(',')
+    .map(segment => segment.trim())
+    .filter(Boolean);
+
+  return segments[segments.length - 1] || '';
+};
+
+const addInstitutionIfMissing = (role: string, background: string) => {
+  if (!role) {
+    return '';
+  }
+
+  const institution = getInstitutionFromText(background);
+  if (!institution) {
+    return role;
+  }
+
+  return hasSameInstitution(role, institution)
+    ? role
+    : `${role}, ${institution}`;
+};
+
 const getAlumniSummary = (member: MemberType) => {
   const role = member.role || member.title || member.comment;
   const destination = member.destination || 'NA';
-  const shouldHideDestination = hasSameInstitution(
+  const isVisitor = getAlumniGroup(member) === 'Visitors';
+  const sameInstitution = hasSameInstitution(
     [role, member.bg].filter(Boolean).join(', '),
     destination,
   );
+  const shouldHideDestination = isVisitor && sameInstitution;
   const backgroundSource = shouldHideDestination
     ? member.bg
     : removeDuplicatedInstitution(member.bg, destination);
@@ -182,6 +208,7 @@ const getAlumniSummary = (member: MemberType) => {
     role,
     background,
     destination: shouldHideDestination ? '' : destination,
+    isVisitor,
   };
 };
 
@@ -275,16 +302,36 @@ export const Members = () => {
                           ) : null}
                         </div>
                         <div className="space-y-1 text-xl leading-relaxed text-textDark">
-                          {summary.role ? <p>{summary.role}</p> : null}
-                          {summary.background ? (
-                            <p>{summary.background}</p>
-                          ) : null}
-                          {summary.destination ? (
-                            <p>
-                              <span className="mr-2 text-textDark/70">→</span>
-                              {summary.destination}
-                            </p>
-                          ) : null}
+                          {summary.isVisitor ? (
+                            <>
+                              {summary.role ? (
+                                <p>
+                                  {addInstitutionIfMissing(
+                                    summary.role,
+                                    member.bg,
+                                  )}
+                                </p>
+                              ) : null}
+                              {summary.destination ? (
+                                <p>{summary.destination}</p>
+                              ) : null}
+                            </>
+                          ) : (
+                            <>
+                              {summary.role ? <p>{summary.role}</p> : null}
+                              {summary.background ? (
+                                <p>{summary.background}</p>
+                              ) : null}
+                              {summary.destination ? (
+                                <p>
+                                  <span className="mr-2 text-textDark/70">
+                                    →
+                                  </span>
+                                  {summary.destination}
+                                </p>
+                              ) : null}
+                            </>
+                          )}
                         </div>
                       </div>
                     </article>

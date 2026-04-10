@@ -313,7 +313,12 @@ export const Members = () => {
                                 </p>
                               ) : null}
                               {summary.destination ? (
-                                <p>{summary.destination}</p>
+                                <p>
+                                  <span className="mr-2 text-textDark/70">
+                                    →
+                                  </span>
+                                  {summary.destination}
+                                </p>
                               ) : null}
                             </>
                           ) : (

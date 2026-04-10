@@ -204,34 +204,41 @@ export const Members = () => {
 
                   return (
                     <article
+                      className="border-b border-textDark/10 pb-5 last:border-b-0"
                       key={`${section}-${member.name}-${i}`}
-                      className="rounded-lg border border-textDark/10 bg-card/70 p-5 shadow-sm"
                     >
-                      {member.homepage ? (
-                        <a
-                          className="text-2xl font-semibold text-text underline-offset-4 hover:underline"
-                          href={member.homepage}
-                        >
-                          {member.name}
-                        </a>
-                      ) : (
-                        <h4 className="text-2xl font-semibold text-text">
-                          {member.name}
-                        </h4>
-                      )}
-                      <div className="mt-3 space-y-2 text-lg leading-relaxed text-textDark">
-                        {summary.role ? <p>{summary.role}</p> : null}
-                        {summary.background ? (
-                          <p>{summary.background}</p>
-                        ) : null}
-                        {summary.destination ? (
-                          <p>→ {summary.destination}</p>
-                        ) : null}
-                        {member.period ? (
-                          <p className="text-base text-textDark/90">
-                            {member.period}
-                          </p>
-                        ) : null}
+                      <div className="flex flex-col gap-2 md:grid md:grid-cols-[260px,1fr] md:gap-6">
+                        <div>
+                          {member.homepage ? (
+                            <a
+                              className="text-2xl font-semibold text-text underline-offset-4 hover:underline"
+                              href={member.homepage}
+                            >
+                              {member.name}
+                            </a>
+                          ) : (
+                            <h4 className="text-2xl font-semibold text-text">
+                              {member.name}
+                            </h4>
+                          )}
+                          {member.period ? (
+                            <p className="mt-1 text-base text-textDark/80">
+                              {member.period}
+                            </p>
+                          ) : null}
+                        </div>
+                        <div className="space-y-1 text-xl leading-relaxed text-textDark">
+                          {summary.role ? <p>{summary.role}</p> : null}
+                          {summary.background ? (
+                            <p>{summary.background}</p>
+                          ) : null}
+                          {summary.destination ? (
+                            <p>
+                              <span className="mr-2 text-textDark/70">→</span>
+                              {summary.destination}
+                            </p>
+                          ) : null}
+                        </div>
                       </div>
                     </article>
                   );

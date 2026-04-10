@@ -15,7 +15,7 @@ export const Intro = () => {
       <div className="absolute inset-0 -z-10">
         <Image
           alt="SUTD campus background"
-          className="scale-105 object-cover blur-sm"
+          className="scale-105 object-cover blur-md"
           fill
           priority
           src={data.school}

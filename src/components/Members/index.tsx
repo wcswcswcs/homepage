@@ -167,14 +167,16 @@ const shouldHideBackground = (role: string, background: string) => {
 const getAlumniSummary = (member: MemberType) => {
   const role = member.role || member.title || member.comment;
   const destination = member.destination || 'NA';
-  const deduplicatedBg = removeDuplicatedInstitution(member.bg, destination);
-  const background = shouldHideBackground(role, deduplicatedBg)
-    ? ''
-    : deduplicatedBg;
   const shouldHideDestination = hasSameInstitution(
     [role, member.bg].filter(Boolean).join(', '),
     destination,
   );
+  const backgroundSource = shouldHideDestination
+    ? member.bg
+    : removeDuplicatedInstitution(member.bg, destination);
+  const background = shouldHideBackground(role, backgroundSource)
+    ? ''
+    : backgroundSource;
 
   return {
     role,

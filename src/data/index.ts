@@ -2025,7 +2025,7 @@ const data = {
       image: '/members/Vishal.png',
       mail: '',
       homepage: 'https://vgthengane.github.io/',
-      destination: 'University of Wollongong',
+      destination: 'University of Surrey',
       period: 'August, 2024 – May, 2025',
       alumniGroup: 'Visitors',
       role: 'Visiting Ph.D. Student',

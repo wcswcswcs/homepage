@@ -127,10 +127,50 @@ const hasSameInstitution = (text: string, destination?: string) => {
   );
 };
 
+const normalizeComparableText = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const includesStudentKeyword = (text: string) =>
+  /student|ph\.d|phd|master/.test(text.toLowerCase());
+
+const shouldHideBackground = (role: string, background: string) => {
+  if (!role || !background) {
+    return false;
+  }
+
+  const normalizedRole = normalizeComparableText(role);
+  const normalizedBackground = normalizeComparableText(background);
+
+  if (normalizedRole === normalizedBackground) {
+    return true;
+  }
+
+  if (
+    (normalizedRole.includes(normalizedBackground) ||
+      normalizedBackground.includes(normalizedRole)) &&
+    hasSameInstitution(role, background)
+  ) {
+    return true;
+  }
+
+  return (
+    hasSameInstitution(role, background) &&
+    includesStudentKeyword(role) &&
+    includesStudentKeyword(background)
+  );
+};
+
 const getAlumniSummary = (member: MemberType) => {
   const role = member.role || member.title || member.comment;
   const destination = member.destination || 'NA';
   const deduplicatedBg = removeDuplicatedInstitution(member.bg, destination);
+  const background = shouldHideBackground(role, deduplicatedBg)
+    ? ''
+    : deduplicatedBg;
   const shouldHideDestination = hasSameInstitution(
     [role, member.bg].filter(Boolean).join(', '),
     destination,
@@ -138,7 +178,7 @@ const getAlumniSummary = (member: MemberType) => {
 
   return {
     role,
-    background: deduplicatedBg,
+    background,
     destination: shouldHideDestination ? '' : destination,
   };
 };

@@ -42,7 +42,9 @@ const ALUMNI_SECTIONS: Array<'Research Staff' | 'Visitors' | 'Graduate'> = [
   'Graduate',
 ];
 
-const getAlumniGroup = (member: MemberType): 'Research Staff' | 'Visitors' | 'Graduate' => {
+const getAlumniGroup = (
+  member: MemberType,
+): 'Research Staff' | 'Visitors' | 'Graduate' => {
   if (member.alumniGroup) {
     return member.alumniGroup;
   }
@@ -60,11 +62,54 @@ const getAlumniGroup = (member: MemberType): 'Research Staff' | 'Visitors' | 'Gr
   return 'Graduate';
 };
 
+const normalizeText = (text: string) => text.trim().toLowerCase();
+const escapeRegExp = (text: string) =>
+  text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const removeDuplicatedInstitution = (text: string, destination?: string) => {
+  if (!text || !destination) {
+    return text;
+  }
+
+  const normalizedDestination = normalizeText(destination);
+  const primaryDestination = destination.split('·')[0].trim();
+  const normalizedPrimaryDestination = normalizeText(primaryDestination);
+  const segments = text
+    .split(',')
+    .map(segment => segment.trim())
+    .filter(Boolean);
+
+  if (segments.length > 1) {
+    const lastSegment = segments[segments.length - 1];
+    const normalizedLastSegment = normalizeText(lastSegment);
+
+    if (
+      normalizedLastSegment === normalizedDestination ||
+      normalizedLastSegment === normalizedPrimaryDestination ||
+      normalizedDestination.includes(normalizedLastSegment)
+    ) {
+      return segments.slice(0, -1).join(', ');
+    }
+  }
+
+  if (normalizeText(text).includes(normalizedPrimaryDestination)) {
+    return text
+      .replace(new RegExp(escapeRegExp(primaryDestination), 'ig'), '')
+      .replace(/\s*,\s*$/, '')
+      .trim();
+  }
+
+  return text;
+};
+
 const getAlumniDescription = (member: MemberType) => {
   const role = member.role || member.title || member.comment;
   const destination = member.destination || 'NA';
+  const deduplicatedBg = removeDuplicatedInstitution(member.bg, destination);
 
-  return [role, member.bg].filter(Boolean).join(', ') + ` → ${destination}`;
+  return (
+    [role, deduplicatedBg].filter(Boolean).join(', ') + ` → ${destination}`
+  );
 };
 
 export const Members = () => {
@@ -111,7 +156,9 @@ export const Members = () => {
       <Title title="Alumni" />
       <div className="mt-10 w-full space-y-10">
         {ALUMNI_SECTIONS.map(section => {
-          const items = Alumni.filter(member => getAlumniGroup(member) === section);
+          const items = Alumni.filter(
+            member => getAlumniGroup(member) === section,
+          );
 
           if (items.length === 0) {
             return null;
@@ -134,7 +181,9 @@ export const Members = () => {
                           {member.name}
                         </a>
                       ) : (
-                        <h4 className="text-2xl font-semibold text-text">{member.name}</h4>
+                        <h4 className="text-2xl font-semibold text-text">
+                          {member.name}
+                        </h4>
                       )}
                       <p className="mt-2 text-xl leading-relaxed text-textDark">
                         {description}
